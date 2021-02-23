@@ -96,6 +96,10 @@ public class RocksGrakn implements Grakn {
         return graknDBOptions.dataDir();
     }
 
+    public Path metadataDirectory() {
+        return directory().resolve("_meta");
+    }
+
     org.rocksdb.Options rocksDBOptions() {
         return rocksDBOptions;
     }
